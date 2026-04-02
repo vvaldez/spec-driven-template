@@ -1,3 +1,8 @@
+# Local / ephemeral context (tracked templates: *.example.md)
+CONTEXT.md
+CONTEXT_TRANSFER.md
+CONTEXT_TRANSFER_FROM_*.md
+
 # OS / Editor noise
 .DS_Store
 Thumbs.db
