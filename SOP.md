@@ -3,6 +3,9 @@
 ## Purpose of This SOP
 This document describes how to work with this markdown-only, spec-driven template in a consistent, safe, and creative way. It focuses on planning and coordination with AI assistants across devices and tools.
 
+## Git Workflow (Contributing to This Template)
+For substantive edits to the template itself, use a **feature branch** and open a **pull request** to `main` rather than committing large changes directly on `main`. Small doc fixes can stay on `main` if that matches your workflow, but branches keep history reviewable and match how many teams work with shared repos.
+
 ## Principles
 - **Planning-only**: Use this repository for specifications, context, and workflows—not for executable code.
 - **Markdown-only**: Keep all content in human-readable markdown files.
@@ -30,9 +33,9 @@ This document describes how to work with this markdown-only, spec-driven templat
 - Clearly tell each assistant which files they should read and which they should ignore.
 
 ## Session Handoffs (`CONTEXT_TRANSFER.md`)
-For handoffs between devices, models, or sessions, use the root **`CONTEXT_TRANSFER.md`** template: overwrite it each time with current focus, decisions, and open questions. It is ephemeral and should not contain private data or secrets. Point the next assistant at it (and optionally your private `CONTEXT.md`) when resuming work.
+For handoffs between devices, models, or sessions, use a local **`CONTEXT_TRANSFER.md`** (create it from **`CONTEXT_TRANSFER.example.md`** after clone; see `README.md`). Overwrite it each time with current focus, decisions, and open questions. It is ephemeral and should not contain private data or secrets. Point the next assistant at it (and optionally your private `CONTEXT.md`) when resuming work.
 
-For **traceability**, you can ask a model to write a handoff to **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (same sections as `CONTEXT_TRANSFER.md`) — for example `CONTEXT_TRANSFER_FROM_CLAUDE_MOBILE.md`. Merge or replace into `CONTEXT_TRANSFER.md` when you want a single file for the next assistant. See `CONTEXT_TRANSFER.md` for the full convention and optional `.gitignore` note.
+For **traceability**, you can ask a model to write a handoff to **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (same sections as `CONTEXT_TRANSFER.md`) — for example `CONTEXT_TRANSFER_FROM_CLAUDE_MOBILE.md`. Merge or replace into `CONTEXT_TRANSFER.md` when you want a single file for the next assistant. Those `FROM_*` files and `CONTEXT_TRANSFER.md` are **gitignored** in this template so they are not pushed by default; see `CONTEXT_TRANSFER.example.md` for the full convention.
 
 ## How to Ask for Help (From Models or Humans)
 You will get far better answers if you ask smart, well-contextualized questions. Before asking for help:

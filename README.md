@@ -36,6 +36,23 @@ You can also record a stable choice in **`HUMAN.md`** under **“My persona (opt
 
 All real implementation work and executable code should live in a **separate implementation repository** that you create once you are ready, following the guidance in `SECURITY.md` and `HUMAN.md`.
 
+## Setup After Clone (Local Context Files)
+
+**`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, and **`CONTEXT_TRANSFER_FROM_*.md`** are **gitignored** so your live notes and handoffs are not pushed by accident. After cloning or forking, copy the tracked templates once:
+
+```bash
+cp CONTEXT.example.md CONTEXT.md
+cp CONTEXT_TRANSFER.example.md CONTEXT_TRANSFER.md
+```
+
+(On Windows PowerShell you can use `Copy-Item`.) Edit those local files freely; they stay on your machine unless you change `.gitignore`.
+
+### Teams and sharing `CONTEXT*` files
+
+This repo is set up so **`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, and **`CONTEXT_TRANSFER_FROM_*.md`** stay **private by default** (gitignored). That still supports collaboration: everyone aligns on **shared, committed** docs (`SPEC.md`, `SOP.md`, `DECISIONS.md`, etc.) while each person keeps **their own** live context and handoffs local — which matches how most teams work today with AI tools, where each person’s scratch notes and session state differ.
+
+If you work with **multiple people** and decide you **want** to share those `CONTEXT*` files, you can remove or adjust the relevant lines in `.gitignore` and commit them. Only do that after **everyone understands** that whatever goes into git is **visible to collaborators** and **retained in git history** (including if the repo is later forked or made public). There is no obligation to share them; the default is intentionally cautious.
+
 ## How to Start (Minimal Path)
 This matches **Persona 1** by default; other personas may add steps — see `advanced/PERSONAS.md`.
 
@@ -54,8 +71,8 @@ You can have a complete, useful planning loop using only the required files in t
 - `SECURITY.md` – Safety boundaries, “no secrets / no code” policy, and how to graduate to a real implementation repo.
 - `HUMAN.md` – Private human context and a personal gate for when to start real implementation work.
 - `AGENTS.md` – Instructions and priorities for all agents and AI models operating in this repo.
-- `CONTEXT.md` – A live project snapshot for your own use (this template describes a shape; your contents are private).
-- `CONTEXT_TRANSFER.md` – Optional ephemeral handoff between sessions or devices; overwrite each time; do not put secrets in it. For model-generated handoffs with explicit provenance, use the naming pattern **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (documented inside `CONTEXT_TRANSFER.md`).
+- `CONTEXT.example.md` – Tracked template for a live project snapshot; **copy to `CONTEXT.md`** (gitignored) after clone.
+- `CONTEXT_TRANSFER.example.md` – Tracked template for session handoffs; **copy to `CONTEXT_TRANSFER.md`** (gitignored). Model-generated provenance files use **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (also gitignored); full convention is documented inside `CONTEXT_TRANSFER.example.md`.
 
 ## Advanced Docs in `advanced/` (Unlock Later)
 The `advanced/` directory contains optional documents that add structure and depth once the basics feel comfortable. You do **not** need any of them to start.

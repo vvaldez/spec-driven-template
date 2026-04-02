@@ -11,6 +11,12 @@ This repository is a **markdown-only, planning-first template**. It is not a pla
 
 Assume that anything committed here may eventually become public. Treat this repo as a safe, shareable planning space.
 
+## Collaboration and `CONTEXT*` files (default: private)
+
+The template **gitignores** `CONTEXT.md`, `CONTEXT_TRANSFER.md`, and `CONTEXT_TRANSFER_FROM_*.md` so personal session notes and handoffs are not pushed by mistake. **Collaboration still works** when each contributor keeps their own context private and the team shares **committed** specs and process docs instead.
+
+If your team **chooses** to track and share those files, you must treat them like any other committed markdown: **everyone with repo access can read them**, and **git history keeps past versions**. Only opt in after the group agrees that level of sharing is acceptable. With today’s tooling, keeping per-person context private and sharing `SPEC.md`-style artifacts is a reasonable default.
+
 ## Data Handling
 - When you need to discuss real systems, redact or anonymize details before adding them to markdown files.
 - If you must reference logs or stack traces, remove or obfuscate any sensitive identifiers.
