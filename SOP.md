@@ -29,6 +29,11 @@ This document describes how to work with this markdown-only, spec-driven templat
 - Use IDE assistants for structured edits, navigation, and consistency checks across files.
 - Clearly tell each assistant which files they should read and which they should ignore.
 
+## Session Handoffs (`CONTEXT_TRANSFER.md`)
+For handoffs between devices, models, or sessions, use the root **`CONTEXT_TRANSFER.md`** template: overwrite it each time with current focus, decisions, and open questions. It is ephemeral and should not contain private data or secrets. Point the next assistant at it (and optionally your private `CONTEXT.md`) when resuming work.
+
+For **traceability**, you can ask a model to write a handoff to **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (same sections as `CONTEXT_TRANSFER.md`) — for example `CONTEXT_TRANSFER_FROM_CLAUDE_MOBILE.md`. Merge or replace into `CONTEXT_TRANSFER.md` when you want a single file for the next assistant. See `CONTEXT_TRANSFER.md` for the full convention and optional `.gitignore` note.
+
 ## How to Ask for Help (From Models or Humans)
 You will get far better answers if you ask smart, well-contextualized questions. Before asking for help:
 

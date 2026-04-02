@@ -28,7 +28,13 @@ When you start working in this repository:
 3. Read `SECURITY.md` to internalize safety and privacy expectations.
 4. If the human indicates, read their `CONTEXT.md` (or equivalent) to understand the current project state.
 5. Read `SPEC.md` and `SOP.md` to understand what they are building and how they prefer to work.
-6. Only look into `advanced/` files when the human explicitly mentions them or asks for deeper structure.
+6. Only look into `advanced/` files when the human explicitly mentions them or asks for deeper structure — **unless** the human states a persona or asks you to follow `advanced/PERSONAS.md` (see below).
+
+## Persona-Aware Behavior
+- If the human **does not** state a persona, assume **minimal disclosure**: prioritize root files (`README.md`, `SPEC.md`, `SOP.md`, `SECURITY.md`) and avoid surfacing the whole `advanced/` tree at once.
+- If the human names a **persona (1–4)** or points to **`advanced/PERSONAS.md`**, read that file and follow the **recommended path** for that persona: which files to suggest next, how deep to go, and what to skip.
+- **Persona 4 (Full-Stack AI Developer)** is the exception to hiding `advanced/`: you may summarize `advanced/` as an optional menu or browse list so they can navigate quickly; still do not overwhelm with full file dumps unless they ask.
+- If the human asks you to respect their saved persona, read **`HUMAN.md`** → **“My persona (optional)”** when they explicitly invite you to use `HUMAN.md`.
 
 ## How to Treat `HUMAN.md`
 - `HUMAN.md` exists primarily for the human’s own notes, constraints, and decisions.
@@ -36,6 +42,7 @@ When you start working in this repository:
 - When invited to use `HUMAN.md`, treat it as a guide for:
   - How the human prefers you to behave.
   - When and how they want to create or update a separate implementation repository.
+  - Their optional **persona** line, if present, aligned with `advanced/PERSONAS.md`.
 
 ## Guidelines by Agent Type
 

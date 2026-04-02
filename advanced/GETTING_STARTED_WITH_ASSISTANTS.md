@@ -3,6 +3,9 @@
 ## Purpose
 This guide is for humans who are new to AI coding assistants and want a gentle way to start using them with this template.
 
+## Persona and First Message
+Before diving in, skim **`advanced/PERSONAS.md`** and pick the persona that fits you (default if unsure: **Persona 1**). Then paste the **sample prompt** from the root **`README.md`** (section *Choose Your Persona*) into your assistant so it follows the right path and does not overwhelm you with every file at once.
+
 ## What Are AI Coding Assistants?
 Broadly, there are two kinds of tools you might use with this repo:
 - **IDE assistants** (e.g., GitHub Copilot, Cursor, Gemini Code Assist, Codeium): They plug into your editor and help write or edit text as you type—in this case, markdown specs and docs.
