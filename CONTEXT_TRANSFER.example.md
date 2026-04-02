@@ -2,6 +2,8 @@
 
 Copy this file to **`CONTEXT_TRANSFER.md`** after you clone or fork (see root `.gitignore`). **`CONTEXT_TRANSFER.md` is not committed** so each session’s handoff stays local unless you choose to share it another way.
 
+**Teams:** Same rules as `CONTEXT.md` — gitignored by default; only commit handoffs if everyone agrees their text belongs in **shared git history**. See `README.md` and `SECURITY.md`.
+
  **Purpose**: Temporary context handoff between AI models and devices.  
  This file is ephemeral — overwrite it each session. Do not commit private data.
 

@@ -47,6 +47,12 @@ cp CONTEXT_TRANSFER.example.md CONTEXT_TRANSFER.md
 
 (On Windows PowerShell you can use `Copy-Item`.) Edit those local files freely; they stay on your machine unless you change `.gitignore`.
 
+### Teams and sharing `CONTEXT*` files
+
+This repo is set up so **`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, and **`CONTEXT_TRANSFER_FROM_*.md`** stay **private by default** (gitignored). That still supports collaboration: everyone aligns on **shared, committed** docs (`SPEC.md`, `SOP.md`, `DECISIONS.md`, etc.) while each person keeps **their own** live context and handoffs local — which matches how most teams work today with AI tools, where each person’s scratch notes and session state differ.
+
+If you work with **multiple people** and decide you **want** to share those `CONTEXT*` files, you can remove or adjust the relevant lines in `.gitignore` and commit them. Only do that after **everyone understands** that whatever goes into git is **visible to collaborators** and **retained in git history** (including if the repo is later forked or made public). There is no obligation to share them; the default is intentionally cautious.
+
 ## How to Start (Minimal Path)
 This matches **Persona 1** by default; other personas may add steps — see `advanced/PERSONAS.md`.
 
