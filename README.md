@@ -39,18 +39,18 @@ When you are ready to **implement**—whether that means writing code, locking a
 
 ## Setup After Clone (Local Context Files)
 
-**`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, and **`CONTEXT_TRANSFER_FROM_*.md`** are **gitignored** so your live notes and handoffs are not pushed by accident. After cloning or forking, copy the tracked templates once:
+**`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, **`CONTEXT_TRANSFER_FROM_*.md`**, and optional **`CONTEXT_SNAPSHOT.md`** are **gitignored** so your live notes and handoffs are not pushed by accident. After cloning or forking, copy the tracked templates once:
 
 ```bash
 cp CONTEXT.example.md CONTEXT.md
 cp CONTEXT_TRANSFER.example.md CONTEXT_TRANSFER.md
 ```
 
-(On Windows PowerShell you can use `Copy-Item`.) Edit those local files freely; they stay on your machine unless you change `.gitignore`.
+(On Windows PowerShell you can use `Copy-Item`.) Optionally copy **`CONTEXT_SNAPSHOT.example.md`** → **`CONTEXT_SNAPSHOT.md`** for a dated end-of-session snapshot (same privacy rules as `CONTEXT.md`). Edit those local files freely; they stay on your machine unless you change `.gitignore`.
 
 ### Teams and sharing `CONTEXT*` files
 
-This repo is set up so **`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, and **`CONTEXT_TRANSFER_FROM_*.md`** stay **private by default** (gitignored). That still supports collaboration: everyone aligns on **shared, committed** docs (`SPEC.md`, `SOP.md`, `DECISIONS.md`, etc.) while each person keeps **their own** live context and handoffs local — which matches how most teams work today with AI tools, where each person’s scratch notes and session state differ.
+This repo is set up so **`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, **`CONTEXT_TRANSFER_FROM_*.md`**, and **`CONTEXT_SNAPSHOT.md`** stay **private by default** (gitignored). That still supports collaboration: everyone aligns on **shared, committed** docs (`SPEC.md`, `SOP.md`, `DECISIONS.md`, etc.) while each person keeps **their own** live context and handoffs local — which matches how most teams work today with AI tools, where each person’s scratch notes and session state differ.
 
 If you work with **multiple people** and decide you **want** to share those `CONTEXT*` files, you can remove or adjust the relevant lines in `.gitignore` and commit them. Only do that after **everyone understands** that whatever goes into git is **visible to collaborators** and **retained in git history** (including if the repo is later forked or made public). There is no obligation to share them; the default is intentionally cautious.
 
@@ -73,6 +73,7 @@ You can have a complete, useful planning loop using only the required files in t
 - `HUMAN.md` – Private human context and a personal gate for when to start real implementation work.
 - `AGENTS.md` – Instructions and priorities for all agents and AI models operating in this repo.
 - `CONTEXT.example.md` – Tracked template for a live project snapshot; **copy to `CONTEXT.md`** (gitignored) after clone.
+- `CONTEXT_SNAPSHOT.example.md` – Tracked template for an optional **end-of-session** handoff; **copy to `CONTEXT_SNAPSHOT.md`** (gitignored) when useful.
 - `CONTEXT_TRANSFER.example.md` – Tracked template for session handoffs; **copy to `CONTEXT_TRANSFER.md`** (gitignored). Model-generated provenance files use **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (also gitignored); full convention is documented inside `CONTEXT_TRANSFER.example.md`.
 - `DEV.md` – **Template maintainers only**: scope and SOP for evolving *this* repository; see `TODO.md` for maintainer milestones. Skip if you are only using the repo to plan your own product.
 - `TODO.md` – Maintainer milestone checklist for the template itself (not your product backlog—use `SPEC.md` for that).
