@@ -66,7 +66,6 @@ This matches **Persona 1** by default; other personas may add steps — see `adv
 You can have a complete, useful planning loop using only the required files in the project root.
 
 ## Core Files in the Root
-- `DEV.md` – **Template maintainers only**: scope and SOP for evolving *this* repository; fork users planning their own work can skip it (see `TODO.md` for maintainer milestones).
 - `README.md` – Overview, intent, and how to get started.
 - `SPEC.md` – Main specifications for your outcome (software, creative work, or hybrid); see file header for how to read “product” and “features.”
 - `SOP.md` – Standard operating procedures for working with AI tools and this template.
@@ -75,6 +74,8 @@ You can have a complete, useful planning loop using only the required files in t
 - `AGENTS.md` – Instructions and priorities for all agents and AI models operating in this repo.
 - `CONTEXT.example.md` – Tracked template for a live project snapshot; **copy to `CONTEXT.md`** (gitignored) after clone.
 - `CONTEXT_TRANSFER.example.md` – Tracked template for session handoffs; **copy to `CONTEXT_TRANSFER.md`** (gitignored). Model-generated provenance files use **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (also gitignored); full convention is documented inside `CONTEXT_TRANSFER.example.md`.
+- `DEV.md` – **Template maintainers only**: scope and SOP for evolving *this* repository; see `TODO.md` for maintainer milestones. Skip if you are only using the repo to plan your own product.
+- `TODO.md` – Maintainer milestone checklist for the template itself (not your product backlog—use `SPEC.md` for that).
 
 ## Advanced Docs in `advanced/` (Unlock Later)
 The `advanced/` directory contains optional documents that add structure and depth once the basics feel comfortable. You do **not** need any of them to start.
