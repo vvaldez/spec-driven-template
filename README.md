@@ -95,6 +95,8 @@ If you are new to AI coding assistants, you can also look at:
 ## Using This Template With Different Tools
 This template is intentionally tool-agnostic. It is designed to work equally well with IDE assistants (GitHub Copilot, Cursor, Gemini Code Assist, Codeium, and similar tools) and chat-first models (Claude, ChatGPT, Gemini, Perplexity, Poe, Replit Agents, and others). It also plays nicely alongside classic spec and modeling tools like OpenAPI/Swagger, AsyncAPI, JSON Schema, the C4 model, and Mermaid or PlantUML diagrams for architecture and flows. The goal is to give you a lightweight, markdown-only backbone for specs and workflows that you can plug into whatever combination of AI assistants and developer tools you already use.
 
+**Optional deep specialist prompts:** If you want many **role-specific** markdown agents (beyond this repo’s one `AGENTS.md`), browse community catalogs after you are in an **implementation** context. For example, [**agency-agents**](https://github.com/msitarzewski/agency-agents) bundles a large roster with optional integration into Cursor rules and other tools. That is **optional** and **not required** to use this template; it is most relevant to **Personas 2 and 4** when you are ready for execution-heavy workflows. See `advanced/GETTING_STARTED_WITH_ASSISTANTS.md` for how this coexists with planning-only rules here.
+
 ## Background and Further Reading
 If you want to explore related work and prior art:
 - GitHub blog: “Spec-driven development: Using Markdown as a programming language when building with AI” – an introduction to spec-first workflows using Markdown and AI assistants.
@@ -114,6 +116,8 @@ When you decide you are ready to **implement** (e.g. write code, or move creativ
 3. Create a **new repository or workspace** for implementation (typical for software; for purely creative work, your “implementation” might be Scrivener, a game engine, or a shared drive—still keep this template as planning-only).
 4. Copy over only the specifications and documents you want to use there.
 5. Keep this template repository as a planning and reference space, or fork it for your next project.
+
+**Optional — specialist agent libraries (implementation / IDE only):** After you have a **separate** workspace for code (or heavy tooling), you *may* layer in third-party **markdown agent packs** so your assistant adopts a named discipline (e.g. security review, UX) inside that environment. One public example is [**agency-agents**](https://github.com/msitarzewski/agency-agents) (many role-specific agents and optional install paths for Cursor, Claude Code, Copilot, and others—**third-party**, check their license and content before use). Do **not** use those packs to justify code or automation **inside this planning repo**; here, **`AGENTS.md`** remains the single contract, markdown-only.
 
 ### Quickstart Prompt for When You’re Ready to Code
 If you have read and understood the rules above and want help getting started with **real code** in a **separate** repo, paste a prompt like this (include your acknowledgment line from `HUMAN.md` if you use that ritual):

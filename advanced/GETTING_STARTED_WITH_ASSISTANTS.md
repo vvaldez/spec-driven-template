@@ -24,6 +24,15 @@ Here is a safe, low-friction way to start:
 
 Stay within markdown docs only; do not add code or secrets to this repo.
 
+## Optional: Specialist Agent Libraries (e.g. Agency-Style Packs)
+Some projects publish **large collections of markdown “agents”**—each file describes a specialist role, tone, and workflow (often with code-oriented examples). A well-known example is [**agency-agents**](https://github.com/msitarzewski/agency-agents) (third-party; review their license and content yourself).
+
+**When it can help:** You have a **separate implementation repository** or IDE project, and you want the assistant to **deeply** adopt one discipline at a time (security, design, marketing, etc.) using files or rules **there**—not in this planning repo.
+
+**When to skip it:** You are still in **Persona 1**-style planning, or you are happy with a single **`AGENTS.md`** and your specs. You do not need a catalog to fill out `SPEC.md`.
+
+**Avoiding conflicts:** In **this** template repository, **`AGENTS.md` wins**: markdown-only, no code, no secrets. Specialist packs often assume **code and deliverables**; use them only where that is appropriate (implementation repo, Cursor rules, Copilot agents folder, etc.), and keep planning here under the template rules. More detail: `README.md` (*Using This Template With Different Tools*, *Creating a Separate Implementation Repository*) and `SOP.md` (*Multi-Model Collaboration Patterns*).
+
 ## Safety Basics
 - Remember that this repository is **markdown-only** and should never contain executable code or secrets.
 - If a model suggests adding code or configuration files here, ask it instead to:

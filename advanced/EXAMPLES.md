@@ -11,6 +11,7 @@ A new user clones the template and wants a small web app.
 3. In `SPEC.md`, fill **Vision and Goals** and **Personas / Users** for the app.
 4. Add three items under **High-Level Feature List**, then expand one in **Feature Specifications** with acceptance criteria.
 5. When ready for code, follow `README.md` → **Creating a Separate Implementation Repository**, complete the optional acknowledgment in `HUMAN.md` if they use it, then create the new repo and copy only the specs they need.
+6. **Optional:** In the **implementation** repo (not the planning template), add IDE rules or agent files from a third-party catalog if they want depth—e.g. copy or install specialists from [**agency-agents**](https://github.com/msitarzewski/agency-agents) for Cursor, Copilot, Claude Code, or other supported tools. Keep **`AGENTS.md`** in the planning repo as the only assistant contract **there**; review any external pack’s license and prompts before use.
 
 ## Example: Non-Software Walkthrough — Short-Film Treatment
 Same template, creative outcome: a 12-minute short film.

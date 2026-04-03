@@ -17,6 +17,14 @@ Use this pattern when asking an assistant for help:
 
 You can paste and fill this in when asking questions to keep them focused and productive.
 
+## Implementation Repo — Specialist Agent From a Library (e.g. Agency-Agents)
+Use this in your **separate implementation repository** or IDE session when you have installed or copied a specialist agent from a third-party pack (example: [**agency-agents**](https://github.com/msitarzewski/agency-agents)). Adapt the role name and paths to your setup.
+
+> We are working in **[implementation repo name]** (not the markdown-only planning template).  
+> For this task, use the **[@role-or-agent-name]** specialist behavior from our installed agent pack (e.g. agency-agents).  
+> Still respect: copied specs from our template (**no secrets**), **`SECURITY.md`** habits, and our project’s acceptance criteria.  
+> Do **not** treat the planning template repo as a place to add code or tool config.
+
 ## Refactoring and Restructuring Prompts
 Examples for reorganizing sections, splitting documents, or simplifying text.
 
