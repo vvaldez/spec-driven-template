@@ -34,6 +34,8 @@ For substantive edits to the template itself, use a **feature branch** and open 
 - Use IDE assistants for structured edits, navigation, and consistency checks across files.
 - Clearly tell each assistant which files they should read and which they should ignore.
 
+When you want the assistant to behave as a **named specialist during implementation** (e.g. security review, UX critique) inside a **code** repository or IDE workspace, you can optionally install or copy patterns from **third-party markdown agent libraries**. One example is [**agency-agents**](https://github.com/msitarzewski/agency-agents). Treat those as **add-ons for the implementation side**: they do not replace this template’s **`AGENTS.md`** in the **planning** repo, and they often conflict with “markdown-only here” if applied blindly—scope them to the repo or tool where code and automation belong.
+
 ## Session Handoffs (`CONTEXT_TRANSFER.md`)
 For handoffs between devices, models, or sessions, use a local **`CONTEXT_TRANSFER.md`** (create it from **`CONTEXT_TRANSFER.example.md`** after clone; see `README.md`). Overwrite it each time with current focus, decisions, and open questions. It is ephemeral and should not contain private data or secrets. Point the next assistant at it (and optionally your private `CONTEXT.md`) when resuming work.
 
