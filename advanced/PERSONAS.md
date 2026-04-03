@@ -30,6 +30,8 @@ Figure out what to ask an AI assistant to do next.
 
 **What to skip for now**: Everything else. Come back when you feel stuck or curious.
 
+**Creative / non-software note**: If your “product” is a story, game bible, screenplay, or similar, the same path applies. Use `SPEC.md` for vision, audience, and major beats; treat “features” as acts, chapters, mechanics, or milestones. You do not need code or an implementation *repository* unless you later choose one—your “implementation” might be Final Draft, a game engine, or a writers’ room.
+
 -----
 
 ## Persona 2: The Developer, AI Novice

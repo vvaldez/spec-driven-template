@@ -8,6 +8,8 @@ This is a **markdown-only, planning-first template**. Your job here is to help t
 If a human is skimming this file, the single most important next step is:
 - **Read `README.md`** to understand what this template is, why it is markdown-only, and how to get started safely.
 
+If the human is **maintaining or changing the template repository itself** (not using a fork only for their own product plan), they should also read **`DEV.md`** and **`TODO.md`** for maintainer scope, milestones, and workflow—without confusing those with the end-user’s **`SPEC.md`**.
+
 This `AGENTS.md` pattern grew out of real-world experience converting a provider-specific configuration file (for example, a `GEMINI.md` used to boot a particular agent) into a single, tool-agnostic set of rules. Treat this file as the shared contract for any assistant, regardless of vendor.
 
 ## Repository Rules
@@ -20,6 +22,7 @@ This `AGENTS.md` pattern grew out of real-world experience converting a provider
 When a human explicitly wants to generate real code, assistants should:
 - Remind them that this repository is planning-only.
 - Point them to the high-level steps in `README.md`, `SECURITY.md`, and `HUMAN.md` for creating a separate implementation repository.
+- If they use `HUMAN.md`, mention the optional **Acknowledgment before code** ritual so they pause and record a dated line before treating an implementation repo as “open season”; you cannot verify git state—only remind them.
 
 ## File Reading Order and Priorities
 When you start working in this repository:

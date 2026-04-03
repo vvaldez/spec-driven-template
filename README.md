@@ -1,12 +1,13 @@
 # Spec-Driven Development Template (Markdown-Only)
 
 ## What This Is
-A markdown-only, planning-first template for spec-driven development with AI. It is intentionally inert: no executable code lives here, only specifications, context, and workflows for coordinating multiple AI tools.
+A markdown-only, planning-first template for **spec-driven work** with AI. “Spec” means any structured plan you care about—not only software. This repository is intentionally inert: no executable code lives here, only specifications, context, and workflows for coordinating multiple AI tools.
 
 ## Who This Is For
-- Developers and tinkerers exploring AI-assisted planning.
+- Developers and tinkerers exploring AI-assisted planning for apps and systems.
+- **Creative and non-software work**: story or character development, game narrative and content bibles, play or screenplay structure, research notes, events, courses, or any project where you want clarity before you “produce” the final artifact.
 - People using multiple assistants (IDE plugins and chat models) across desktop and mobile.
-- Anyone who wants a portable, tool-agnostic way to describe what they are building before they write code.
+- Anyone who wants a portable, tool-agnostic way to describe an outcome—whether that outcome is code, a manuscript, a design doc, or something else—**before** heavy implementation elsewhere.
 
 ## Choose Your Persona (First Session)
 
@@ -34,7 +35,7 @@ You can also record a stable choice in **`HUMAN.md`** under **“My persona (opt
 - Encourages creativity and careful thinking instead of auto-generating code.
 - Makes it easy to use from any environment, device, or AI assistant.
 
-All real implementation work and executable code should live in a **separate implementation repository** that you create once you are ready, following the guidance in `SECURITY.md` and `HUMAN.md`.
+When you are ready to **implement**—whether that means writing code, locking a final draft, building game content in tools, or rehearsing from a script—do that work in a **separate space** (often a second repository for software, or your usual creative toolchain). This planning repo stays markdown-only; follow `SECURITY.md` and `HUMAN.md` when you graduate.
 
 ## Setup After Clone (Local Context Files)
 
@@ -58,15 +59,16 @@ This matches **Persona 1** by default; other personas may add steps — see `adv
 
 1. Read `AGENTS.md` to understand how AI assistants should behave in this repo.
 2. Skim `SECURITY.md` to understand the safety and “no secrets / no code” rules.
-3. Open `SPEC.md` and start drafting what you want to build.
+3. Open `SPEC.md` and start drafting what you want to create (product, story, game, event—see `SPEC.md` for scope).
 4. Use your own `CONTEXT.md` (or a similar file) as a live snapshot for daily work.
 5. Refer to `SOP.md` for suggested day-to-day workflows with multiple tools and devices.
 
 You can have a complete, useful planning loop using only the required files in the project root.
 
 ## Core Files in the Root
+- `DEV.md` – **Template maintainers only**: scope and SOP for evolving *this* repository; fork users planning their own work can skip it (see `TODO.md` for maintainer milestones).
 - `README.md` – Overview, intent, and how to get started.
-- `SPEC.md` – Main product and feature specifications.
+- `SPEC.md` – Main specifications for your outcome (software, creative work, or hybrid); see file header for how to read “product” and “features.”
 - `SOP.md` – Standard operating procedures for working with AI tools and this template.
 - `SECURITY.md` – Safety boundaries, “no secrets / no code” policy, and how to graduate to a real implementation repo.
 - `HUMAN.md` – Private human context and a personal gate for when to start real implementation work.
@@ -104,16 +106,19 @@ This template focuses specifically on being:
 - Structured like a gentle tutorial, starting simple and slowly revealing more optional depth.
 
 ## Creating a Separate Implementation Repository (When Ready)
-When you decide you are ready to write real code:
+When you decide you are ready to **implement** (e.g. write code, or move creative work into production tools):
+
 1. Review `HUMAN.md` and `SECURITY.md` to confirm your own criteria and boundaries.
-2. Create a new repository for implementation code.
-3. Copy over only the specifications and documents you want to use there.
-4. Keep this template repository as a planning and reference space, or fork it for your next project.
+2. If you will use **code**, complete the optional **acknowledgment ritual** in `HUMAN.md` (*Acknowledgment before code*) so you pause before the first implementation repo—not enforced by software, but recommended friction.
+3. Create a **new repository or workspace** for implementation (typical for software; for purely creative work, your “implementation” might be Scrivener, a game engine, or a shared drive—still keep this template as planning-only).
+4. Copy over only the specifications and documents you want to use there.
+5. Keep this template repository as a planning and reference space, or fork it for your next project.
 
 ### Quickstart Prompt for When You’re Ready to Code
-If you have read and understood the rules above and want help getting started with real code, you can paste a prompt like this into your assistant:
+If you have read and understood the rules above and want help getting started with **real code** in a **separate** repo, paste a prompt like this (include your acknowledgment line from `HUMAN.md` if you use that ritual):
 
-> I have read and understand this template’s rules (markdown-only, no code, no secrets).  
+> I have read and understand this template’s rules (markdown-only, no code, no secrets in the planning repo).  
+> I have added my acknowledgment line to `HUMAN.md` under “Acknowledgment before code” (paste the same line here if you like).  
 > Help me create a **separate implementation repository** for my project.  
 > 1) Propose a minimal folder and file structure for the new repo.  
 > 2) Tell me which specs from this template I should copy over.  

@@ -6,6 +6,8 @@ This document describes how to work with this markdown-only, spec-driven templat
 ## Git Workflow (Contributing to This Template)
 For substantive edits to the template itself, use a **feature branch** and open a **pull request** to `main` rather than committing large changes directly on `main`. Small doc fixes can stay on `main` if that matches your workflow, but branches keep history reviewable and match how many teams work with shared repos.
 
+**Maintainer milestones** for the template live in **`TODO.md`**; scope and maintainer-only process are summarized in **`DEV.md`** (distinct from a fork user’s product spec in **`SPEC.md`**).
+
 ## Principles
 - **Planning-only**: Use this repository for specifications, context, and workflows—not for executable code.
 - **Markdown-only**: Keep all content in human-readable markdown files.

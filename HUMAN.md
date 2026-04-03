@@ -27,8 +27,19 @@ Describe your comfort level with:
 - Sharing partial context with third-party services.
 - Changing specs versus locking them down.
 
+## Acknowledgment Before Code (Optional)
+This template is markdown-only; nothing here **technically** blocks you from creating another repo. The ritual below is **deliberate friction** so you do not drift into code by habit.
+
+When you are **seriously ready** to plan or spin up a **separate implementation repository** (where real code will live), add **one dated line** under this heading. You may copy the example phrase verbatim or shorten it slightly—keep it unmistakably intentional so future-you noticed the moment.
+
+**Example phrase (copy and fill in the date):**
+
+> On **YYYY-MM-DD** I, the human operator, solemnly swear that I have read `SECURITY.md`, I will not put secrets in the planning repo, and I accept that code belongs only in my separate implementation workspace—in a moment of lucidity I hereby acknowledge these risks and proceed without blaming the template, the cat, or the alignment of the planets.
+
+If you never write code for this project, you can skip this entire subsection.
+
 ## When I Will Create a Real Implementation Repository
-Define your personal criteria for when to move from planning to coding, for example:
+Define your personal criteria for when to move from planning to coding (or to another production toolchain), for example:
 - “I have a stable enough spec for a first slice.”
 - “I have identified major risks and how to handle them.”
 - “I have the time and energy to maintain an actual codebase.”

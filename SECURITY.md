@@ -33,6 +33,10 @@ If your team **chooses** to track and share those files, you must treat them lik
   - Explain the conflict.
   - Suggest safer alternatives, such as creating a separate implementation repository or using a secure secret manager.
 
+## Optional “Acknowledgment Before Code” (Not a Security Control)
+
+`HUMAN.md` may describe a **silly or verbose acknowledgment phrase** you copy when you are ready to move toward code in a **separate** repo. That ritual is **social friction** to reduce accidental, unconsidered jumps into implementation—it does **not** replace real practices: no secrets in any repo, separate spaces for code, and human review of anything sensitive. Assumptions and habits remain your responsibility.
+
 ## Creating a Safe Implementation Repository
 When you are ready to build a real system:
 1. Create a **separate implementation repository** for actual code and automation.
