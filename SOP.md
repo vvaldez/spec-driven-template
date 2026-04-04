@@ -6,23 +6,23 @@ This document describes how to work with this markdown-only, spec-driven templat
 ## Git Workflow (Contributing to This Template)
 For substantive edits to the template itself, use a **feature branch** and open a **pull request** to `main` rather than committing large changes directly on `main`. Small doc fixes can stay on `main` if that matches your workflow, but branches keep history reviewable and match how many teams work with shared repos.
 
-**Maintainer milestones** for the template live in **`TODO.md`**; scope and maintainer-only process are summarized in **`DEV.md`** (distinct from a fork user’s product spec in **`SPEC.md`**).
+**Maintainer milestones** for the template live in **`.dev/TODO.md`**; scope and maintainer-only process are summarized in **`DEV.md`** (distinct from a **template user**’s product spec in **`SPEC.md`** and root **`TODO.md`**). Role vocabulary: **`.advanced/AUDIENCE.md`**.
 
 ## Principles
 - **Planning-only**: Use this repository for specifications, context, and workflows—not for executable code.
 - **Markdown-only**: Keep all content in human-readable markdown files.
 - **Multi-model, multi-device**: Assume you may switch between different AI tools and between desktop and mobile.
-- **Simple first**: Start with a minimal set of files and structure; only add more when it clearly helps.
-- **Research before reinventing**: Look for prior art and existing patterns before designing something new, and avoid duplicating work when a suitable approach already exists.
+- **Simple first** (see **`INTENT.md` → Rule #3**): Start with a minimal set of files and structure; only add more when it clearly helps.
+- **Research before reinventing** (see **`INTENT.md` → Rule #3** and *Research before reinventing*): Look for prior art and existing patterns before designing something new, and avoid duplicating work when a suitable approach already exists.
 
-Ranked goals for this template are stated in **`INTENT.md`**: **Rule #1** safety and reputation (see **`SECURITY.md`**); **Rule #2** token and attention efficiency—**never** sacrifice Rule #1 for fewer tokens.
+Ranked goals for this template are stated in **`INTENT.md`**: **Rule #1** safety and reputation (see **`SECURITY.md`**); **Rule #2** token and attention efficiency; **Rule #3** simplicity and honest reuse—**never** sacrifice Rule #1 for fewer tokens or for “elegant” duplication. Prefer **explicit roles** (template user, maintainer, product audience) when writing or editing docs—see **`INTENT.md`** (*Explicit language*) and **`.advanced/AUDIENCE.md`**.
 
 ## Token and attention efficiency (working with AI) — Rule #2
 
 **After** safety and redaction (**Rule #1**), work in ways that **minimize unnecessary context** for you and for models:
 
 - **Bounded context:** Point assistants at **specific files and sections**; avoid “read the whole repo” unless you match Persona 4 in `.advanced/PERSONAS.md` or explicitly want a tour.
-- **Handoffs:** Use **`CONTEXT_TRANSFER.md`** (from `CONTEXT_TRANSFER.example.md`) to summarize current focus instead of re-pasting long chat history when you switch devices or models.
+- **Handoffs:** Use your local **`CONTEXT_TRANSFER.md`** (from **`CONTEXT_TRANSFER.example.md`**) to summarize current focus instead of re-pasting long chat history when you switch devices or models—all such files match **`CONTEXT*.md`** in `.gitignore`.
 - **Persona fit:** Match depth to the persona you declared; default to the **smallest** useful file set (`README.md`, `SPEC.md`, `SOP.md`, `SECURITY.md`).
 - **Small steps:** Prefer short questions and small doc edits over mega-prompts; reuse patterns in `.advanced/PROMPTS.md` when helpful.
 - **Single source of truth:** Avoid maintaining duplicate long specs in chat—anchor to markdown in the repo.
@@ -51,10 +51,10 @@ Efficiency also means **not re-specifying ecosystems that already exist**—see 
 
 When you want the assistant to behave as a **named specialist during implementation** (e.g. security review, UX critique) inside a **code** repository or IDE workspace, you can optionally install or copy patterns from **third-party markdown agent libraries**. One example is [**agency-agents**](https://github.com/msitarzewski/agency-agents). Treat those as **add-ons for the implementation side**: they do not replace this template’s **`AGENTS.md`** in the **planning** repo, and they often conflict with “markdown-only here” if applied blindly—scope them to the repo or tool where code and automation belong.
 
-## Session Handoffs (`CONTEXT_TRANSFER.md`)
-For handoffs between devices, models, or sessions, use a local **`CONTEXT_TRANSFER.md`** (create it from **`CONTEXT_TRANSFER.example.md`** after clone; see `README.md`). Overwrite it each time with current focus, decisions, and open questions. It is ephemeral and should not contain private data or secrets. Point the next assistant at it (and optionally your private `CONTEXT.md`) when resuming work.
+## Session handoffs (`CONTEXT*.md`)
+For handoffs between devices, models, or sessions, use a local **`CONTEXT_TRANSFER.md`** (from **`CONTEXT_TRANSFER.example.md`**; see `README.md`). Overwrite it each time with current focus, decisions, and open questions. It is ephemeral and should not contain private data or secrets. Point the next assistant at it (and optionally your private **`CONTEXT.md`**) when resuming work.
 
-For **traceability**, you can ask a model to write a handoff to **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (same sections as `CONTEXT_TRANSFER.md`) — for example `CONTEXT_TRANSFER_FROM_CLAUDE_MOBILE.md`. Merge or replace into `CONTEXT_TRANSFER.md` when you want a single file for the next assistant. Those `FROM_*` files and `CONTEXT_TRANSFER.md` are **gitignored** in this template so they are not pushed by default; see `CONTEXT_TRANSFER.example.md` for the full convention.
+For **traceability**, you can ask a model to write a handoff to **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (same sections as `CONTEXT_TRANSFER.md`). Merge or replace into **`CONTEXT_TRANSFER.md`** when you want one canonical file. Those paths match **`CONTEXT*.md`** in `.gitignore`; see **`CONTEXT_TRANSFER.example.md`** for the full convention.
 
 ## How to Ask for Help (From Models or Humans)
 You will get far better answers if you ask smart, well-contextualized questions. Before asking for help:

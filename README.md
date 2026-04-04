@@ -3,13 +3,22 @@
 ## What This Is
 A markdown-only, planning-first template for **spec-driven work** with AI. “Spec” means any structured plan you care about—not only software. This repository is intentionally inert: no executable code lives here, only specifications, context, and workflows for coordinating multiple AI tools.
 
-**Why it is shaped this way:** see [`INTENT.md`](INTENT.md) (ranked goals: **Rule #1** safety/reputation, **Rule #2** token efficiency, portability, progressive disclosure).
+**Why it is shaped this way:** see [`INTENT.md`](INTENT.md) (ranked goals: **Rule #1** safety/reputation, **Rule #2** token efficiency, **Rule #3** simplicity and honest reuse, portability, progressive disclosure).
 
 ## Who This Is For
 - Developers and tinkerers exploring AI-assisted planning for apps and systems.
 - **Creative and non-software work**: story or character development, game narrative and content bibles, play or screenplay structure, research notes, events, courses, or any project where you want clarity before you “produce” the final artifact.
 - People using multiple assistants (IDE plugins and chat models) across desktop and mobile.
 - Anyone who wants a portable, tool-agnostic way to describe an outcome—whether that outcome is code, a manuscript, a design doc, or something else—**before** heavy implementation elsewhere.
+
+## Template user, maintainer, and product audience
+
+| Role | In one sentence |
+| --- | --- |
+| **Template user** | You use this repo to plan *your* work (`SPEC.md`, context files). |
+| **Template maintainer** | You change the *shared* template so others inherit your updates (`DEV.md`, `.dev/` including `.dev/TODO.md` for upstream milestones). |
+
+**Product audience** is different: the people or players **for the outcome** you describe in `SPEC.md`—not “people using the template.” A **synonym table** and optional place to note *your* product audience live in [`.advanced/AUDIENCE.md`](.advanced/AUDIENCE.md).
 
 ## Choose Your Persona (First Session)
 
@@ -41,20 +50,20 @@ When you are ready to **implement**—whether that means writing code, locking a
 
 ## Setup After Clone (Local Context Files)
 
-**`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, **`CONTEXT_TRANSFER_FROM_*.md`**, and optional **`CONTEXT_SNAPSHOT.md`** are **gitignored** so your live notes and handoffs are not pushed by accident. After cloning or forking, copy the tracked templates once:
+Any local file matching **`CONTEXT*.md`** is **gitignored**, except tracked **`CONTEXT*.example.md`** templates (see `.gitignore`). After clone, copy the templates you need by removing `.example` from the filename—for example:
 
 ```bash
 cp CONTEXT.example.md CONTEXT.md
 cp CONTEXT_TRANSFER.example.md CONTEXT_TRANSFER.md
 ```
 
-(On Windows PowerShell you can use `Copy-Item`.) Optionally copy **`CONTEXT_SNAPSHOT.example.md`** → **`CONTEXT_SNAPSHOT.md`** for a dated end-of-session snapshot, and **`TASKS.example.md`** → **`TASKS.md`** (at **repo root** only—gitignored there) for a short personal checklist (same privacy rules as `CONTEXT.md`). Tracked **`.advanced/TASKS.md`** is a different file: an optional template for phased task lists. Edit those local files freely; they stay on your machine unless you change `.gitignore`.
+(On Windows PowerShell you can use `Copy-Item`.) Optionally copy **`TASKS.example.md`** → **`TASKS.md`** at **repo root** (also gitignored via `/TASKS.md`). Tracked **`.advanced/TASKS.md`** is a separate optional template for phased task lists.
 
 ### Teams and sharing `CONTEXT*` files
 
-This repo is set up so **`CONTEXT.md`**, **`CONTEXT_TRANSFER.md`**, **`CONTEXT_TRANSFER_FROM_*.md`**, **`CONTEXT_SNAPSHOT.md`**, and **`TASKS.md`** stay **private by default** (gitignored). That still supports collaboration: everyone aligns on **shared, committed** docs (`SPEC.md`, `SOP.md`, `DECISIONS.md`, etc.) while each person keeps **their own** live context and handoffs local — which matches how most teams work today with AI tools, where each person’s scratch notes and session state differ.
+**`CONTEXT*.md`** (other than `*.example.md`) and **`/TASKS.md`** stay **private by default**. Everyone can still align on **shared, committed** docs (`SPEC.md`, `SOP.md`, etc.) while each person keeps live context local.
 
-If you work with **multiple people** and decide you **want** to share those `CONTEXT*` files, you can remove or adjust the relevant lines in `.gitignore` and commit them. Only do that after **everyone understands** that whatever goes into git is **visible to collaborators** and **retained in git history** (including if the repo is later forked or made public). There is no obligation to share them; the default is intentionally cautious.
+If you **want** to share those files, change `.gitignore` and commit only after **everyone understands** visibility and **git history** (including if the repo is later public). The default is intentionally cautious.
 
 ## How to Start (Minimal Path)
 This matches **Persona 1** by default; other personas may add steps — see `.advanced/PERSONAS.md`.
@@ -71,22 +80,20 @@ You can have a complete, useful planning loop using only the required files in t
 
 - **Smallest responsible set with AI:** `SPEC.md` + `AGENTS.md` + `SECURITY.md` (see `INTENT.md`).
 - **Practical fourth:** this `README.md` (setup, copy `CONTEXT*.example` → local files).
-- **Not** part of day-one product planning: root **`TODO.md`** here tracks **maintainer milestones** for the template itself—**not** your product backlog (use `SPEC.md` and optionally gitignored **`TASKS.md`**). **`HUMAN.md`** is optional private prefs. **`.advanced/`** unlocks later.
+- **Optional early:** root **`TODO.md`** is a **template user** checklist for your project (next steps); pair it with **`SPEC.md`**. For a **private** scratch checklist, copy **`TASKS.example.md`** → **`TASKS.md`** (gitignored). **`HUMAN.md`** is optional private prefs. **`.advanced/`** unlocks later. **Maintainers:** upstream milestones live in **`.dev/TODO.md`** (see **`DEV.md`**).
 
 ## Core Files in the Root
 - `README.md` – Overview, intent, and how to get started.
-- `INTENT.md` – Design philosophy: Rule #1 safety/reputation, Rule #2 token efficiency, portability, progressive disclosure.
+- `INTENT.md` – Design philosophy: Rules #1–#3 (safety, token efficiency, simplicity/reuse), portability, progressive disclosure.
 - `SPEC.md` – Main specifications for your outcome (software, creative work, or hybrid); see file header for how to read “product” and “features.”
 - `SOP.md` – Standard operating procedures for working with AI tools and this template.
 - `SECURITY.md` – Safety boundaries, “no secrets / no code” policy, and how to graduate to a real implementation repo.
 - `HUMAN.md` – Private human context and a personal gate for when to start real implementation work.
 - `AGENTS.md` – Instructions and priorities for all agents and AI models operating in this repo.
-- `CONTEXT.example.md` – Tracked template for a live project snapshot; **copy to `CONTEXT.md`** (gitignored) after clone.
-- `CONTEXT_SNAPSHOT.example.md` – Tracked template for an optional **end-of-session** handoff; **copy to `CONTEXT_SNAPSHOT.md`** (gitignored) when useful.
-- `TASKS.example.md` – Tracked template for an optional **personal checklist**; **copy to `TASKS.md`** (gitignored). **Not** the same as root **`TODO.md`** (maintainer milestones for this template).
-- `CONTEXT_TRANSFER.example.md` – Tracked template for session handoffs; **copy to `CONTEXT_TRANSFER.md`** (gitignored). Model-generated provenance files use **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (also gitignored); full convention is documented inside `CONTEXT_TRANSFER.example.md`.
-- `DEV.md` – **Template maintainers only**: scope and SOP for evolving *this* repository; see `TODO.md` for maintainer milestones. Skip if you are only using the repo to plan your own product.
-- `TODO.md` – Maintainer milestone checklist for the template itself (not your product backlog—use `SPEC.md` for that).
+- **`CONTEXT*.example.md`** – Tracked templates (snapshot, handoff, end-of-session, etc.); copy each to the matching **`CONTEXT*.md`** name without `.example`. Ignored paths follow **`CONTEXT*.md`** in `.gitignore`; details live in the example files.
+- `TASKS.example.md` – Optional **private** checklist; **copy to `TASKS.md`** (repo root, gitignored). Complements or replaces parts of root **`TODO.md`** if you want tasks off the default commit set.
+- `DEV.md` – **Template maintainers only**: scope and SOP for evolving *this* repository; see **`.dev/TODO.md`** for upstream milestones. Skip if you are only using the repo to plan your own product.
+- `TODO.md` – **Template user** project checklist (next steps); use with **`SPEC.md`**. **Not** where upstream maintainers track template evolution—that is **`.dev/TODO.md`**.
 
 ## Advanced Docs in `.advanced/` (Unlock Later)
 The **`.advanced/`** directory (leading dot—optional docs) contains documents that add structure and depth once the basics feel comfortable. You do **not** need any of them to start.
@@ -94,6 +101,7 @@ The **`.advanced/`** directory (leading dot—optional docs) contains documents 
 **Renamed from `advanced/`:** If you forked an older revision, update links: the folder is now **`.advanced/`**.
 
 Examples include:
+- Who the docs address—template user vs maintainer vs your product audience (`.advanced/AUDIENCE.md`).
 - Reading paths by persona (`.advanced/PERSONAS.md`).
 - Architecture and data model templates.
 - Feature indexes, decision logs, risk registers.

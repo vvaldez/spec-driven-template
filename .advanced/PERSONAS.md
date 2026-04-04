@@ -1,7 +1,9 @@
 # PERSONAS.md
 
- **Purpose**: Describes typical human users of this template and maps each to a recommended starting path.  
+ **Purpose**: Describes typical **template users** of this template (people using the repo to plan *their* work) and maps each to a recommended starting path.  
  Use this file to find yourself, then follow your recommended reading list.
+
+**Not the same as [`.advanced/AUDIENCE.md`](AUDIENCE.md):** *Personas* = how deeply you read; *AUDIENCE* = template user vs maintainer vs **product audience** (who your `SPEC.md` is for).
 
 -----
 
@@ -30,7 +32,7 @@ Figure out what to ask an AI assistant to do next.
 
 **What to skip for now**: Everything else. Come back when you feel stuck or curious.
 
-**About root `TODO.md`:** In the **upstream template** repo, `TODO.md` is for **maintainer milestones** (evolving the template)—**not** your personal product task list. Track **your** outcome in **`SPEC.md`**; optionally use gitignored **`TASKS.md`** (copy from `TASKS.example.md`) for a short checklist.
+**About `TODO.md`:** Root **`TODO.md`** is for **your** project next steps as a **template user** (checklist alongside **`SPEC.md`**). **Template maintainers** tracking upstream work use **`.dev/TODO.md`** instead. Optionally use gitignored **`TASKS.md`** (copy from `TASKS.example.md`) for a private checklist.
 
 **Creative / non-software note**: If your “product” is a story, game bible, screenplay, or similar, the same path applies. Use `SPEC.md` for vision, audience, and major beats; treat “features” as acts, chapters, mechanics, or milestones. You do not need code or an implementation *repository* unless you later choose one—your “implementation” might be Final Draft, a game engine, or a writers’ room.
 

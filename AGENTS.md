@@ -5,12 +5,19 @@ If you are an AI assistant, agent, or tool operating in this repository, read an
 
 This is a **markdown-only, planning-first template**. Your job here is to help the human think, plan, and organize. You must not turn this repository into an executable codebase.
 
-**Priority (see `INTENT.md`):** **Rule #1** — Safety and reputation (`SECURITY.md`, no secrets, avoid harmful or reckless guidance). **Rule #2** — Token and attention efficiency: prefer **minimal necessary reads** and **section-scoped** help; **never** sacrifice Rule #1 for shorter context.
+**Priority (see `INTENT.md`):** **Rule #1** — Safety and reputation (`SECURITY.md`, no secrets, avoid harmful or reckless guidance). **Rule #2** — Token and attention efficiency: prefer **minimal necessary reads** and **section-scoped** help; **never** sacrifice Rule #1 for shorter context. **Rule #3** — Simplicity and honest reuse: minimal structure; **cite and link** instead of duplicating long text; see `SOP.md` (*Simple first*, *Researching Prior Art*).
 
 If a human is skimming this file, the single most important next step is:
 - **Read `README.md`** to understand what this template is, why it is markdown-only, and how to get started safely.
 
-If the human is **maintaining or changing the template repository itself** (not using a fork only for their own product plan), they should also read **`DEV.md`** and **`TODO.md`** for maintainer scope, milestones, and workflow—without confusing those with the end-user’s **`SPEC.md`**.
+## Default audience (assistants)
+Unless the human **identifies as a maintainer / template contributor / template editor** for *this* repository, assume they are a **template user** (planning their own product or work). In that default mode, prioritize root docs (`README.md`, `SPEC.md`, `SOP.md`, `SECURITY.md`, and optionally **`TODO.md`** for their checklist) and **do not** assume they need **`DEV.md`**, **`.dev/AGENTS.md`**, or **`.dev/TODO.md`** (maintainer layer).
+
+**Template user** vs **product audience:** The human in the chat is usually the **template user** (using this repo). **`SPEC.md`** “users,” personas, and placeholders often mean the **product audience**—who the planned outcome serves—not template documentation readers. When ambiguous, ask or state your assumption; see **`.advanced/AUDIENCE.md`**.
+
+When the human **does** identify as maintaining *this* template (not merely using a copy only for their own plan), read **`.dev/AGENTS.md`** in addition to this file, and follow the maintainer guidance there together with these rules.
+
+If the human is **maintaining or changing the template repository itself**, they should also read **`DEV.md`** and **`.dev/TODO.md`** for maintainer scope, milestones, and workflow—without confusing those with the **template user**’s **`SPEC.md`** or root **`TODO.md`** (the template user’s project checklist).
 
 This `AGENTS.md` pattern grew out of real-world experience converting a provider-specific configuration file (for example, a `GEMINI.md` used to boot a particular agent) into a single, tool-agnostic set of rules. Treat this file as the shared contract for any assistant, regardless of vendor.
 
@@ -30,7 +37,7 @@ When a human explicitly wants to generate real code, assistants should:
 When you start working in this repository:
 1. Read `AGENTS.md` (this file) to learn the rules.
 2. Read `README.md` to understand the overall intent and structure.
-3. Optionally skim `INTENT.md` for ranked principles (Rule #1 / #2) and design intent—skip if the human only needs a quick edit in `SPEC.md`.
+3. Optionally skim `INTENT.md` for ranked principles (Rule #1–#3), explicit vocabulary, and design intent—skip if the human only needs a quick edit in `SPEC.md`.
 4. Read `SECURITY.md` to internalize safety and privacy expectations.
 5. If the human indicates, read their `CONTEXT.md` (or equivalent) to understand the current project state.
 6. Read `SPEC.md` and `SOP.md` to understand what they are building and how they prefer to work.
@@ -50,10 +57,10 @@ When you start working in this repository:
   - When and how they want to create or update a separate implementation repository.
   - Their optional **persona** line, if present, aligned with `.advanced/PERSONAS.md`.
 
-## How to Treat `.dev/` (maintainer pair preferences)
-- The **`.dev/`** directory is **gitignored** and holds **optional local notes** for people **contributing to this template** (process prefs for human + assistant—not fork users planning their own product).
-- By default, **do not** read, search, or surface `.dev/`.
-- **When allowed:** If the human identifies as a **contributor / maintainer / template editor** (e.g. “I’m maintaining this template,” “follow `DEV.md`,” “read my `.dev/` prefs”) **and** they point you at `.dev/` or ask you to apply those prefs, you may read files there. This **does not** override Rule #1.
+## How to Treat `.dev/` (tracked maintainer layer)
+- The **`.dev/`** directory is **tracked** in git. It includes **`.dev/AGENTS.md`**: extra rules for assistants when the human is in **maintainer / template contributor** context.
+- **Default (template user):** **Do not** read, search, or surface `.dev/` unless the human asks for a specific path there.
+- **Maintainer stated:** When the human identifies as maintaining *this* template, read **`.dev/AGENTS.md`** and follow it together with this file. If they point to **other** paths under `.dev/`, you may read those too. This **does not** override Rule #1.
 
 ## Guidelines by Agent Type
 
@@ -76,6 +83,7 @@ When you start working in this repository:
 
 ## Creativity and Planning Guidelines
 - Encourage exploratory thinking and multiple options when designing features or workflows.
+- Use **explicit roles** when it avoids confusion: **template user** vs **template maintainer** vs **product audience** (see **`INTENT.md`** and **`.advanced/AUDIENCE.md`**).
 - Clearly label speculation, assumptions, and trade-offs.
 - When suggesting changes across multiple files, describe the plan first so the human can decide what to apply.
 - Favor **bounded** help: cite file paths and headings; avoid dumping whole directories unless the human asks or matches Persona 4 guidance in `.advanced/PERSONAS.md`.

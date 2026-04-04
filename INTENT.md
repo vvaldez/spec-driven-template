@@ -20,9 +20,25 @@ Efficiency **never** overrides redaction, safety, or honesty about uncertainty.
 
 ---
 
+## Rule #3 — Simplicity and honest reuse
+
+**After Rules #1 and #2**, prefer the **smallest** structure and wording that still works: fewer new files and headings, clearer names, and **no parallel copies** of the same guidance when one canonical place exists. **Borrow and cite** prior art—link to existing sections, `README.md`, or external references—instead of duplicating long explanations. Habits for “simple first” and **Researching Prior Art** live in [`SOP.md`](SOP.md) (*Principles* and *Researching Prior Art*).
+
+Rule #3 **never** overrides Rule #1 or Rule #2 when they conflict.
+
+---
+
 ## Audience and outcomes
 
 The template serves **novices through experts**, for **creative and technical** work alike. “Product” in [`SPEC.md`](SPEC.md) means whatever outcome you are specifying (software, story, game, event, research, course, …)—the same files support different domains.
+
+**Vocabulary:** **Template user** means someone using this repo to plan their own work; **template maintainer** means someone evolving the shared template for others. **Product audience** means whoever the *planned outcome* serves (readers, players, customers, …)—see [`.advanced/AUDIENCE.md`](.advanced/AUDIENCE.md) for a compact map and alternate terms.
+
+---
+
+## Explicit language
+
+Prefer **named roles** over vague “user” or “we” when it matters: say **template user**, **template maintainer**, or **product audience** (or point to a section of `SPEC.md`). Synonyms and examples live in [`.advanced/AUDIENCE.md`](.advanced/AUDIENCE.md). Being explicit reduces confusion between “reader of this template” and “user of the thing I am specifying.”
 
 ---
 
@@ -40,7 +56,7 @@ Committed files are **markdown-first** and **tool-agnostic** (`AGENTS.md`, `SPEC
 
 ## Research before reinventing
 
-Prefer **borrowing and citing** existing patterns (spec-driven workflows, prior art, community templates) over duplicating whole ecosystems. See **Researching Prior Art** in [`SOP.md`](SOP.md) and **Background and Further Reading** in [`README.md`](README.md).
+Prefer **borrowing and citing** existing patterns (spec-driven workflows, prior art, community templates) over duplicating whole ecosystems. This reinforces **Rule #3**. See **Researching Prior Art** in [`SOP.md`](SOP.md) and **Background and Further Reading** in [`README.md`](README.md).
 
 ---
 
@@ -52,10 +68,13 @@ Alternatives (one repo with `docs/` + gitignored `src/`, etc.) are possible for 
 
 ---
 
-## Maintainer vs fork user artifacts
+## Template user vs template maintainer artifacts
 
-- **Root `TODO.md` (this upstream template):** milestones for **evolving the template**—not your product backlog. Your work lives in **`SPEC.md`** and local **`CONTEXT.md`**; optionally gitignored **`TASKS.md`** from `TASKS.example.md`.
-- **`DEV.md`:** public maintainer guide. Optional **local `.dev/`** (gitignored) holds **pair-specific** maintainer preferences—see `DEV.md` and `AGENTS.md`.
+- **Root `TODO.md`:** **template user** checklist—next steps for *your* planned outcome (see file header). **Not** upstream maintainer milestones.
+- **`.dev/TODO.md`:** milestones for **evolving the shared template** (maintainers). A template user’s **spec** still lives in **`SPEC.md`** and local **`CONTEXT.md`**; optionally gitignored **`TASKS.md`** from `TASKS.example.md`.
+- **`DEV.md`:** public maintainer guide. Tracked **`.dev/`** holds **shared** maintainer-layer docs (including **`.dev/AGENTS.md`** for assistants when the human states maintainer context)—see `DEV.md` and root `AGENTS.md`.
+
+See [`.advanced/AUDIENCE.md`](.advanced/AUDIENCE.md) for role names and synonyms.
 
 ---
 
@@ -65,3 +84,5 @@ Alternatives (one repo with `docs/` + gitignored `src/`, etc.) are possible for 
 - [`SOP.md`](SOP.md) — workflows, tokens, prior art  
 - [`SECURITY.md`](SECURITY.md) — Rule #1 detail  
 - [`AGENTS.md`](AGENTS.md) — assistant contract  
+- [`.advanced/AUDIENCE.md`](.advanced/AUDIENCE.md) — template user, maintainer, product audience  
+- [`.dev/TODO.md`](.dev/TODO.md) — maintainer milestones (upstream); root [`TODO.md`](TODO.md) — template user checklist  

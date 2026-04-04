@@ -3,7 +3,7 @@
 ## Scope and Intent
 This repository is a **markdown-only, planning-first template**. It is not a place for executable code, secrets, or sensitive production data. The goal is to keep this project safe to share and fork while you think and plan.
 
-Ranked template goals (**Rule #1** safety/reputation first, **Rule #2** token efficiency second) are summarized in **`INTENT.md`**—this file is the operational detail for Rule #1.
+Ranked template goals (**Rule #1** safety/reputation first, **Rule #2** token efficiency, **Rule #3** simplicity and honest reuse) are summarized in **`INTENT.md`**—this file is the operational detail for Rule #1.
 
 ## No Code, No Secrets Policy
 - **No executable code**: Do not add source files, scripts, binaries, or configurations intended to be run directly.
@@ -15,7 +15,7 @@ Assume that anything committed here may eventually become public. Treat this rep
 
 ## Collaboration and `CONTEXT*` files (default: private)
 
-The template **gitignores** `CONTEXT.md`, `CONTEXT_TRANSFER.md`, and `CONTEXT_TRANSFER_FROM_*.md` so personal session notes and handoffs are not pushed by mistake. **Collaboration still works** when each contributor keeps their own context private and the team shares **committed** specs and process docs instead.
+The template **gitignores** local files matching **`CONTEXT*.md`**, except tracked **`CONTEXT*.example.md`** templates (see `.gitignore`). **Collaboration still works** when each contributor keeps their own context private and the team shares **committed** specs and process docs instead.
 
 If your team **chooses** to track and share those files, you must treat them like any other committed markdown: **everyone with repo access can read them**, and **git history keeps past versions**. Only opt in after the group agrees that level of sharing is acceptable. With today’s tooling, keeping per-person context private and sharing `SPEC.md`-style artifacts is a reasonable default.
 

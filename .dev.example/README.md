@@ -1,12 +1,12 @@
-# `.dev/` (example)
+# `.dev/` (example patterns)
 
-This folder is **documentation only**: the real **`.dev/`** directory is **gitignored** (see root `.gitignore` and `DEV.md`).
+The real **`.dev/`** directory lives **in the repository** (tracked) and currently includes **`AGENTS.md`** (maintainer rules for assistants) and **`TODO.md`** (upstream maintainer milestones). See root **`AGENTS.md`**, **`DEV.md`**, and **`.gitignore`** (`.dev/` must **not** be ignored so these files commit).
 
-**Purpose:** Optional **local** notes for **maintainers** working on the template—preferences for how *you* and an assistant collaborate (branch style, PR tone, token defaults). **Not** part of the template contract for forks.
+**Purpose of `.dev/`:** Maintainer-layer documentation—how assistants should behave when contributing to *this* template, plus any other **shared** maintainer notes the team commits. **Not** the main contract for **template users** (that remains root + `.advanced/` as documented in `README.md` and `.advanced/AUDIENCE.md`).
 
-**Suggested files inside `.dev/`** (create yourself; do not use the name `DEV.md`—that collides with root `DEV.md`):
+**Optional additional files** you might add under `.dev/` (names are suggestions; **do not** use `DEV.md`—that collides with root `DEV.md`):
 
-- `PREFERENCES.md` or `PAIR.md` — how you want agents to behave when contributing here.
+- `PREFERENCES.md` or `PAIR.md` — team or pair process preferences for maintainer sessions.
 - Short bullets only; **no secrets**.
 
-**Agents:** Only read `.dev/` when the human **identifies as a contributor** to this template and points you there—see `AGENTS.md`.
+**Agents:** Read **`.dev/AGENTS.md`** when the human identifies as a **maintainer / template contributor**; read other `.dev/` paths only when invited—see root **`AGENTS.md`**.

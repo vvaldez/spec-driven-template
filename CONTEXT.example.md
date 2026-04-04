@@ -2,7 +2,7 @@
 
 Copy this file to **`CONTEXT.md`** after you clone or fork (see root `.gitignore`). **`CONTEXT.md` is not committed** so your live snapshot stays local and private.
 
-**Principles:** Ranked goals for this template are in **`INTENT.md`** (Rule #1 safety/reputation, Rule #2 token efficiency).
+**Principles:** Ranked goals for this template are in **`INTENT.md`** (Rules #1–#3: safety/reputation, token efficiency, simplicity and honest reuse).
 
 **Teams:** Shared planning usually lives in committed files like `SPEC.md`. If you later decide the whole group should share `CONTEXT.md`, you must change `.gitignore` and accept that **contents and history become visible** to anyone with repo access — see `README.md` (*Teams and sharing*) and `SECURITY.md`.
 

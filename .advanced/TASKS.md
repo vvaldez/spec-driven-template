@@ -21,5 +21,5 @@ Use this when you need a **phased checklist** derived from your spec (similar in
 - [ ] _(tie each item to a SPEC feature or acceptance criterion)_
 
 ## Notes
-- For **upstream template work**, root **`TODO.md`** is **maintainer milestones**—not this file.
+- For **upstream template work**, **`.dev/TODO.md`** is **maintainer milestones**—not this file (and not root **`TODO.md`**, which is for **template users**).
 - Do not put **secrets** in task text; see `SECURITY.md`.

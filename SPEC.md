@@ -1,6 +1,8 @@
 # SPEC.md
 
-**Product / outcome** in this template means whatever you are specifying: an application, a game, a story or character arc, an event, a research program, a course, etc. Use the sections below in a way that fits your domain; rename headings in your fork if it helps.
+**Product / outcome** in this template means whatever you are specifying: an application, a game, a story or character arc, an event, a research program, a course, etc. Use the sections below in a way that fits your domain; rename headings in your copy if it helps.
+
+**Who is “you” vs “user” here:** As a **template user**, *you* fill this file. The **Personas / Users** section below usually describes your **product audience**—people *for* your outcome—not readers of the template. See [`.advanced/AUDIENCE.md`](.advanced/AUDIENCE.md).
 
 ## Vision and Goals
 Describe, in a few paragraphs, what you are trying to create and why. Focus on the problem space and desired outcomes, not implementation details.
@@ -9,8 +11,8 @@ Describe, in a few paragraphs, what you are trying to create and why. Focus on t
 > *Vision*: A grounded sci-fi novella about climate migrants and a single found family, written for adults who like slow-burn character drama.  
 > *Goals*: Finish a 30k-word draft, one consistent magic-free ruleset for the setting, and three fully realized POV characters before seeking an editor.
 
-## Personas / Users
-- Who are the primary users?
+## Personas / Users (product audience)
+- Who are the primary **users / audience** of the thing you are building or writing (not “users of this template”)?
 - What are their goals, constraints, and contexts?
 
 ## In-Scope vs Out-of-Scope
@@ -46,7 +48,7 @@ Once you adopt advanced docs, link them here (for example):
 - Risks: `.advanced/RISKS.md`
 
 ## Next steps (working) — optional
-Keep **3–7 short bullets** of what you will do next (rewrite often). This stays in one place for **token-efficient** sessions and model handoffs. Alternatively, keep “today” only in gitignored **`CONTEXT.md`** and leave this section empty.
+Keep **3–7 short bullets** of what you will do next (rewrite often). This stays in one place for **token-efficient** sessions and model handoffs. Alternatively, use root **`TODO.md`** as your main checklist, or keep “today” only in gitignored **`CONTEXT.md`** and leave this section empty.
 
 - 
 - 
