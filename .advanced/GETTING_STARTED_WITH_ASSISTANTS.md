@@ -6,7 +6,7 @@ This guide is for humans who are new to AI coding assistants and want a gentle w
 ## Persona and First Message
 Before diving in, skim **`.advanced/PERSONAS.md`** and pick the persona that fits you (default if unsure: **Persona 1**). Then paste the **sample prompt** from the root **`README.md`** (section *Choose Your Persona*) into your assistant so it follows the right path and does not overwhelm you with every file at once.
 
-If you have not yet created local context files, follow **`README.md` → Setup After Clone** (`CONTEXT.example.md` → `CONTEXT.md`, and optionally `CONTEXT_TRANSFER.example.md` → `CONTEXT_TRANSFER.md`).
+If you have not yet created local context files, follow **`README.md` → Setup After Clone** and **`SOP.md` → Session handoffs (`CONTEXT*.md`)** to add `CONTEXT.md` and optionally `CONTEXT_TRANSFER.md` at repo root.
 
 ## What Are AI Coding Assistants?
 Broadly, there are two kinds of tools you might use with this repo:

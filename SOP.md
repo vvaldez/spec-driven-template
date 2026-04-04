@@ -22,7 +22,7 @@ Ranked goals for this template are stated in **`INTENT.md`**: **Rule #1** safety
 **After** safety and redaction (**Rule #1**), work in ways that **minimize unnecessary context** for you and for models:
 
 - **Bounded context:** Point assistants at **specific files and sections**; avoid “read the whole repo” unless you match Persona 4 in `.advanced/PERSONAS.md` or explicitly want a tour.
-- **Handoffs:** Use your local **`CONTEXT_TRANSFER.md`** (from **`CONTEXT_TRANSFER.example.md`**) to summarize current focus instead of re-pasting long chat history when you switch devices or models—all such files match **`CONTEXT*.md`** in `.gitignore`.
+- **Handoffs:** Use your local **`CONTEXT_TRANSFER.md`** (create at repo root; see *Session handoffs* below) to summarize current focus instead of re-pasting long chat history when you switch devices or models—all such files match **`/CONTEXT*.md`** in `.gitignore`.
 - **Persona fit:** Match depth to the persona you declared; default to the **smallest** useful file set (`README.md`, `SPEC.md`, `SOP.md`, `SECURITY.md`).
 - **Small steps:** Prefer short questions and small doc edits over mega-prompts; reuse patterns in `.advanced/PROMPTS.md` when helpful.
 - **Single source of truth:** Avoid maintaining duplicate long specs in chat—anchor to markdown in the repo.
@@ -52,9 +52,39 @@ Efficiency also means **not re-specifying ecosystems that already exist**—see 
 When you want the assistant to behave as a **named specialist during implementation** (e.g. security review, UX critique) inside a **code** repository or IDE workspace, you can optionally install or copy patterns from **third-party markdown agent libraries**. One example is [**agency-agents**](https://github.com/msitarzewski/agency-agents). Treat those as **add-ons for the implementation side**: they do not replace this template’s **`AGENTS.md`** in the **planning** repo, and they often conflict with “markdown-only here” if applied blindly—scope them to the repo or tool where code and automation belong.
 
 ## Session handoffs (`CONTEXT*.md`)
-For handoffs between devices, models, or sessions, use a local **`CONTEXT_TRANSFER.md`** (from **`CONTEXT_TRANSFER.example.md`**; see `README.md`). Overwrite it each time with current focus, decisions, and open questions. It is ephemeral and should not contain private data or secrets. Point the next assistant at it (and optionally your private **`CONTEXT.md`**) when resuming work.
 
-For **traceability**, you can ask a model to write a handoff to **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (same sections as `CONTEXT_TRANSFER.md`). Merge or replace into **`CONTEXT_TRANSFER.md`** when you want one canonical file. Those paths match **`CONTEXT*.md`** in `.gitignore`; see **`CONTEXT_TRANSFER.example.md`** for the full convention.
+At **repo root**, any file whose name matches **`CONTEXT*.md`** is **gitignored** (see root `.gitignore`: `/CONTEXT*.md`). There are **no** tracked sample files—create the files you need locally and use the headings below (or your own).
+
+### `CONTEXT.md` — ongoing project snapshot
+
+Create **`CONTEXT.md`** when you want a durable “where we are” note for you and assistants. Suggested sections:
+
+- **Project overview** — Brief description of what you are planning.
+- **Current status** — Phase, last updated, primary tools.
+- **Key decisions** — Bullet list as you go.
+- **Current priorities** — Numbered short items.
+- **Open questions** — Blockers or pending decisions.
+- **Notes on AI tool usage** — Devices, models, patterns you use.
+
+**Teams:** Shared planning usually lives in committed files like **`SPEC.md`**. Sharing **`CONTEXT.md`** requires changing `.gitignore` and accepting visible **git history**—see **`README.md`** (*Teams and sharing*) and **`SECURITY.md`**.
+
+### `CONTEXT_TRANSFER.md` — ephemeral handoff
+
+Create **`CONTEXT_TRANSFER.md`** and **overwrite** it when you hand off to another session, device, or model. Keep it free of secrets. Suggested sections:
+
+- **Current focus** — One sentence on what you were doing.
+- **Decisions made this session** — Settled choices the next reader should not re-litigate.
+- **Open questions / blockers**
+- **Items to plan / discuss** — Agenda for next time (helpful on mobile).
+- **How to resume** — What to paste or say to the next assistant.
+
+**Named handoffs (`CONTEXT_TRANSFER_FROM_*`):** Ask a model to write **`CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md`** (same section headings) when you want provenance or parallel notes. Merge into **`CONTEXT_TRANSFER.md`** when you want one canonical file. These names still match **`/CONTEXT*.md`** and stay local by default.
+
+**Prompt snippet:** “Write the handoff to `CONTEXT_TRANSFER_FROM_<MODEL>_<PLATFORM>.md` using the same section structure as `CONTEXT_TRANSFER.md`.”
+
+### `CONTEXT_SNAPSHOT.md` — optional end-of-session (maintainer / dense days)
+
+Optional file for “what just landed” before you stop—**when**, **where** (branch, short hash), **what happened**, **what’s stable**, **open edges**, **next session’s first moves**. Not a substitute for **`CONTEXT.md`** or **`CONTEXT_TRANSFER.md`**; use if it helps you resume tomorrow.
 
 ## How to Ask for Help (From Models or Humans)
 You will get far better answers if you ask smart, well-contextualized questions. Before asking for help:

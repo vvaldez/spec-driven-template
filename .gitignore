@@ -1,8 +1,6 @@
-# Local / ephemeral context (tracked templates: *.example.md)
-CONTEXT.md
-CONTEXT_TRANSFER.md
-CONTEXT_TRANSFER_FROM_*.md
-CONTEXT_SNAPSHOT.md
+# Local / ephemeral context (all root-level CONTEXT*.md are private; no tracked samples)
+/CONTEXT*.md
+
 /TASKS.md
 
 # OS / Editor noise

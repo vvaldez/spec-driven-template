@@ -9,7 +9,7 @@ Use this file for **actionable next steps** on the outcome you are planning in [
 | [`SPEC.md`](SPEC.md) | **What** you are building—vision, scope, features, requirements. |
 | **This `TODO.md`** | **What to do next**—short, checkable tasks you can tick off. |
 | [`TASKS.md`](TASKS.example.md) (optional, gitignored) | Copy from `TASKS.example.md` if you want a **private** or ephemeral checklist that stays out of git. |
-| [`CONTEXT.md`](CONTEXT.example.md) | **Where you are now**—phase, focus, constraints (local, not committed by default). |
+| `CONTEXT.md` (you create; see **`SOP.md` → Session handoffs**) | **Where you are now**—phase, focus, constraints (local, not committed by default). |
 
 Keep **`SPEC.md`** as the source of truth for the product; use **`TODO.md`** so you and assistants have a simple “do this next” list without duplicating long spec text.
 

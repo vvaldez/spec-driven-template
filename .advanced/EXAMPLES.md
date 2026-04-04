@@ -6,7 +6,7 @@ Show practical examples of how to use this template on a real or hypothetical pr
 ## Example: First-Time Setup (Software-Oriented)
 A new user clones the template and wants a small web app.
 
-1. Copy `CONTEXT.example.md` → `CONTEXT.md` and note today’s goal in one paragraph.
+1. Create local `CONTEXT.md` (gitignored) and note today’s goal in one paragraph—see **`SOP.md` → Session handoffs**.
 2. Read `AGENTS.md` (rules) and skim `SECURITY.md`.
 3. In `SPEC.md`, fill **Vision and Goals** and **Personas / Users** for the app.
 4. Add three items under **High-Level Feature List**, then expand one in **Feature Specifications** with acceptance criteria.

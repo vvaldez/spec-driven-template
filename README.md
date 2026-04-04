@@ -50,18 +50,13 @@ When you are ready to **implement**—whether that means writing code, locking a
 
 ## Setup After Clone (Local Context Files)
 
-Any local file matching **`CONTEXT*.md`** is **gitignored**, except tracked **`CONTEXT*.example.md`** templates (see `.gitignore`). After clone, copy the templates you need by removing `.example` from the filename—for example:
+At **repo root**, any file matching **`CONTEXT*.md`** is **gitignored** (see `.gitignore`: `/CONTEXT*.md`). The template does **not** ship tracked `CONTEXT*` samples—**create** the files you want (for example empty `CONTEXT.md` / `CONTEXT_TRANSFER.md`) and add sections as in **`SOP.md` → Session handoffs (`CONTEXT*.md`)**.
 
-```bash
-cp CONTEXT.example.md CONTEXT.md
-cp CONTEXT_TRANSFER.example.md CONTEXT_TRANSFER.md
-```
-
-(On Windows PowerShell you can use `Copy-Item`.) Optionally copy **`TASKS.example.md`** → **`TASKS.md`** at **repo root** (also gitignored via `/TASKS.md`). Tracked **`.advanced/TASKS.md`** is a separate optional template for phased task lists.
+Optionally copy **`TASKS.example.md`** → **`TASKS.md`** at **repo root** (gitignored via `/TASKS.md`). Tracked **`.advanced/TASKS.md`** is a separate optional template for phased task lists.
 
 ### Teams and sharing `CONTEXT*` files
 
-**`CONTEXT*.md`** (other than `*.example.md`) and **`/TASKS.md`** stay **private by default**. Everyone can still align on **shared, committed** docs (`SPEC.md`, `SOP.md`, etc.) while each person keeps live context local.
+**`/CONTEXT*.md`** and **`/TASKS.md`** stay **private by default**. Everyone can still align on **shared, committed** docs (`SPEC.md`, `SOP.md`, etc.) while each person keeps live context local.
 
 If you **want** to share those files, change `.gitignore` and commit only after **everyone understands** visibility and **git history** (including if the repo is later public). The default is intentionally cautious.
 
@@ -79,7 +74,7 @@ You can have a complete, useful planning loop using only the required files in t
 ### Bare minimum (token-efficient, especially Persona 1)
 
 - **Smallest responsible set with AI:** `SPEC.md` + `AGENTS.md` + `SECURITY.md` (see `INTENT.md`).
-- **Practical fourth:** this `README.md` (setup, copy `CONTEXT*.example` → local files).
+- **Practical fourth:** this `README.md` (setup, local **`CONTEXT*.md`** per **`SOP.md`**).
 - **Optional early:** root **`TODO.md`** is a **template user** checklist for your project (next steps); pair it with **`SPEC.md`**. For a **private** scratch checklist, copy **`TASKS.example.md`** → **`TASKS.md`** (gitignored). **`HUMAN.md`** is optional private prefs. **`.advanced/`** unlocks later. **Maintainers:** upstream milestones live in **`.dev/TODO.md`** (see **`DEV.md`**).
 
 ## Core Files in the Root
@@ -90,7 +85,7 @@ You can have a complete, useful planning loop using only the required files in t
 - `SECURITY.md` – Safety boundaries, “no secrets / no code” policy, and how to graduate to a real implementation repo.
 - `HUMAN.md` – Private human context and a personal gate for when to start real implementation work.
 - `AGENTS.md` – Instructions and priorities for all agents and AI models operating in this repo.
-- **`CONTEXT*.example.md`** – Tracked templates (snapshot, handoff, end-of-session, etc.); copy each to the matching **`CONTEXT*.md`** name without `.example`. Ignored paths follow **`CONTEXT*.md`** in `.gitignore`; details live in the example files.
+- **Local `CONTEXT*.md`** (you create) – Optional snapshot / handoff files at repo root; all match **`/CONTEXT*.md`** in `.gitignore`. Suggested headings in **`SOP.md` → Session handoffs**.
 - `TASKS.example.md` – Optional **private** checklist; **copy to `TASKS.md`** (repo root, gitignored). Complements or replaces parts of root **`TODO.md`** if you want tasks off the default commit set.
 - `DEV.md` – **Template maintainers only**: scope and SOP for evolving *this* repository; see **`.dev/TODO.md`** for upstream milestones. Skip if you are only using the repo to plan your own product.
 - `TODO.md` – **Template user** project checklist (next steps); use with **`SPEC.md`**. **Not** where upstream maintainers track template evolution—that is **`.dev/TODO.md`**.

@@ -15,7 +15,7 @@ Assume that anything committed here may eventually become public. Treat this rep
 
 ## Collaboration and `CONTEXT*` files (default: private)
 
-The template **gitignores** local files matching **`CONTEXT*.md`**, except tracked **`CONTEXT*.example.md`** templates (see `.gitignore`). **Collaboration still works** when each contributor keeps their own context private and the team shares **committed** specs and process docs instead.
+The template **gitignores** root-level files matching **`/CONTEXT*.md`** (see `.gitignore`). There are no tracked `CONTEXT*` templates in the repo. **Collaboration still works** when each contributor keeps their own context private and the team shares **committed** specs and process docs instead.
 
 If your team **chooses** to track and share those files, you must treat them like any other committed markdown: **everyone with repo access can read them**, and **git history keeps past versions**. Only opt in after the group agrees that level of sharing is acceptable. With today’s tooling, keeping per-person context private and sharing `SPEC.md`-style artifacts is a reasonable default.
 
