@@ -40,8 +40,13 @@ Capture important qualities that affect design, such as:
 
 ## Links to Related Docs
 Once you adopt advanced docs, link them here (for example):
-- Architecture overview: `advanced/ARCHITECTURE.md`
-- Data model: `advanced/DATA_MODEL.md`
-- Decisions: `advanced/DECISIONS.md`
-- Risks: `advanced/RISKS.md`
+- Architecture overview: `.advanced/ARCHITECTURE.md`
+- Data model: `.advanced/DATA_MODEL.md`
+- Decisions: `.advanced/DECISIONS.md`
+- Risks: `.advanced/RISKS.md`
 
+## Next steps (working) — optional
+Keep **3–7 short bullets** of what you will do next (rewrite often). This stays in one place for **token-efficient** sessions and model handoffs. Alternatively, keep “today” only in gitignored **`CONTEXT.md`** and leave this section empty.
+
+- 
+- 

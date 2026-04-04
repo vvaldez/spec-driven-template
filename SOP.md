@@ -15,6 +15,21 @@ For substantive edits to the template itself, use a **feature branch** and open 
 - **Simple first**: Start with a minimal set of files and structure; only add more when it clearly helps.
 - **Research before reinventing**: Look for prior art and existing patterns before designing something new, and avoid duplicating work when a suitable approach already exists.
 
+Ranked goals for this template are stated in **`INTENT.md`**: **Rule #1** safety and reputation (see **`SECURITY.md`**); **Rule #2** token and attention efficiency—**never** sacrifice Rule #1 for fewer tokens.
+
+## Token and attention efficiency (working with AI) — Rule #2
+
+**After** safety and redaction (**Rule #1**), work in ways that **minimize unnecessary context** for you and for models:
+
+- **Bounded context:** Point assistants at **specific files and sections**; avoid “read the whole repo” unless you match Persona 4 in `.advanced/PERSONAS.md` or explicitly want a tour.
+- **Handoffs:** Use **`CONTEXT_TRANSFER.md`** (from `CONTEXT_TRANSFER.example.md`) to summarize current focus instead of re-pasting long chat history when you switch devices or models.
+- **Persona fit:** Match depth to the persona you declared; default to the **smallest** useful file set (`README.md`, `SPEC.md`, `SOP.md`, `SECURITY.md`).
+- **Small steps:** Prefer short questions and small doc edits over mega-prompts; reuse patterns in `.advanced/PROMPTS.md` when helpful.
+- **Single source of truth:** Avoid maintaining duplicate long specs in chat—anchor to markdown in the repo.
+- **Portable workflows:** Keep the same committed specs and handoff files on mobile and desktop; put tool-specific preferences in local **`CONTEXT.md`** or chat, not in shared specs when avoidable.
+
+Efficiency also means **not re-specifying ecosystems that already exist**—see **Researching Prior Art** below.
+
 ## Daily Workflow – Desktop
 1. Open `SPEC.md` and review what you are currently defining or refining.
 2. Skim your `CONTEXT.md` (or equivalent) to recall the current phase and priorities.

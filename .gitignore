@@ -1,8 +1,12 @@
-# Local / ephemeral context (tracked templates: *.example.md)
+﻿# Local / ephemeral context (tracked templates: *.example.md)
 CONTEXT.md
 CONTEXT_TRANSFER.md
 CONTEXT_TRANSFER_FROM_*.md
 CONTEXT_SNAPSHOT.md
+/TASKS.md
+
+# Maintainer pair prefs (local only; see DEV.md and .dev.example/)
+.dev/
 
 # OS / Editor noise
 .DS_Store

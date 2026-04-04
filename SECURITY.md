@@ -3,6 +3,8 @@
 ## Scope and Intent
 This repository is a **markdown-only, planning-first template**. It is not a place for executable code, secrets, or sensitive production data. The goal is to keep this project safe to share and fork while you think and plan.
 
+Ranked template goals (**Rule #1** safety/reputation first, **Rule #2** token efficiency second) are summarized in **`INTENT.md`**—this file is the operational detail for Rule #1.
+
 ## No Code, No Secrets Policy
 - **No executable code**: Do not add source files, scripts, binaries, or configurations intended to be run directly.
 - **No build or deployment setup**: Do not add package manifests, CI/CD pipelines, or infrastructure definitions here.

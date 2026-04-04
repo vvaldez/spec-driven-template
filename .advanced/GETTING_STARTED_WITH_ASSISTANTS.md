@@ -4,7 +4,7 @@
 This guide is for humans who are new to AI coding assistants and want a gentle way to start using them with this template.
 
 ## Persona and First Message
-Before diving in, skim **`advanced/PERSONAS.md`** and pick the persona that fits you (default if unsure: **Persona 1**). Then paste the **sample prompt** from the root **`README.md`** (section *Choose Your Persona*) into your assistant so it follows the right path and does not overwhelm you with every file at once.
+Before diving in, skim **`.advanced/PERSONAS.md`** and pick the persona that fits you (default if unsure: **Persona 1**). Then paste the **sample prompt** from the root **`README.md`** (section *Choose Your Persona*) into your assistant so it follows the right path and does not overwhelm you with every file at once.
 
 If you have not yet created local context files, follow **`README.md` → Setup After Clone** (`CONTEXT.example.md` → `CONTEXT.md`, and optionally `CONTEXT_TRANSFER.example.md` → `CONTEXT_TRANSFER.md`).
 
@@ -41,7 +41,7 @@ Some projects publish **large collections of markdown “agents”**—each file
 - Review AI suggestions before accepting them; treat them as drafts you approve or reject.
 
 ## Example Prompts
-You can use the **Smart Question Template** in `advanced/PROMPTS.md` when asking for help. For example:
+You can use the **Smart Question Template** in `.advanced/PROMPTS.md` when asking for help. For example:
 
 > I’m working on: **clarifying the vision section in SPEC.md**.  
 > Relevant docs: **SPEC.md (Vision and Goals section)**.  

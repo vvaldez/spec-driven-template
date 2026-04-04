@@ -33,7 +33,7 @@ List patterns you find unhelpful or distracting, so assistants can avoid them wh
 ## Extending This File
 If you want more detailed or specialized personalities, you can extend this pattern by:
 - Adding more modes to this file, or
-- Creating additional files under a folder such as `advanced/personalities/` for specific profiles.
+- Creating additional files under a folder such as `.advanced/personalities/` for specific profiles.
 
 The core template does not define those extra files by default, to keep things simple and avoid overwhelming new users.
 

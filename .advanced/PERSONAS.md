@@ -26,9 +26,11 @@ Figure out what to ask an AI assistant to do next.
 1. README.md — Read the “What This Is” and “Who This Is For” sections.
 1. AGENTS.md — Skim the “Read This First” section so you understand what the AI can and cannot do here.
 1. SPEC.md — Start filling in “Vision and Goals” in plain language. Don’t worry about the rest yet.
-1. advanced/GETTING_STARTED_WITH_ASSISTANTS.md — A gentle introduction to AI tools and how to use them with this template.
+1. `.advanced/GETTING_STARTED_WITH_ASSISTANTS.md` — A gentle introduction to AI tools and how to use them with this template.
 
 **What to skip for now**: Everything else. Come back when you feel stuck or curious.
+
+**About root `TODO.md`:** In the **upstream template** repo, `TODO.md` is for **maintainer milestones** (evolving the template)—**not** your personal product task list. Track **your** outcome in **`SPEC.md`**; optionally use gitignored **`TASKS.md`** (copy from `TASKS.example.md`) for a short checklist.
 
 **Creative / non-software note**: If your “product” is a story, game bible, screenplay, or similar, the same path applies. Use `SPEC.md` for vision, audience, and major beats; treat “features” as acts, chapters, mechanics, or milestones. You do not need code or an implementation *repository* unless you later choose one—your “implementation” might be Final Draft, a game engine, or a writers’ room.
 
@@ -51,7 +53,7 @@ Learn how to coordinate multiple AI tools across desktop and mobile.
 1. SPEC.md — Fill it out before opening your IDE.
 1. SOP.md — Read the workflow conventions before starting daily work.
 1. SECURITY.md — Understand the planning vs. implementation repo split.
-1. advanced/ — Explore when you want more structure (architecture, decisions, risks).
+1. `.advanced/` — Explore when you want more structure (architecture, decisions, risks).
 
 **What to skip for now**: HUMAN.md and CONTEXT.md — fill those in as you go.
 
@@ -74,7 +76,7 @@ Get AI assistants to do more consistent, predictable work.
 1. SPEC.md — Fill in your idea; you already know how to prompt, so this should feel natural.
 1. SOP.md — Review the multi-device and mobile workflow sections.
 1. CONTEXT.md — Start using this immediately as your live project snapshot.
-1. advanced/PROMPTS.md — Useful prompt patterns for driving AI assistants with this template.
+1. `.advanced/PROMPTS.md` — Useful prompt patterns for driving AI assistants with this template.
 
 -----
 
@@ -93,8 +95,8 @@ Understand the opinions baked in and decide which ones to keep.
 1. README.md — Skim for structure and opinions.
 1. AGENTS.md — Note the tool-agnostic contract pattern; adapt for your tools.
 1. SPEC.md and SOP.md — Review the templates; modify to fit your standards.
-1. advanced/ — Browse freely; treat as a menu of optional add-ons.
-1. advanced/ORIGIN_STORY.md — Useful if you want to understand the design decisions behind this template.
+1. `.advanced/` — Browse freely; treat as a menu of optional add-ons.
+1. `.advanced/ORIGIN_STORY.md` — Useful if you want to understand the design decisions behind this template.
 
 **What to skip**: GETTING_STARTED_WITH_ASSISTANTS.md — you don’t need it.
 
@@ -107,7 +109,7 @@ Understand the opinions baked in and decide which ones to keep.
 |Curious Non-Dev     |README, AGENTS, SPEC      |GETTING_STARTED               |Everything else|
 |Developer, AI Novice|All root files            |Architecture, Decisions, Risks|—              |
 |AI-Native Non-Dev   |AGENTS, SPEC, SOP, CONTEXT|PROMPTS                       |GETTING_STARTED|
-|Full-Stack AI Dev   |README, AGENTS, SPEC, SOP |All advanced/                 |GETTING_STARTED|
+|Full-Stack AI Dev   |README, AGENTS, SPEC, SOP |All .advanced/                 |GETTING_STARTED|
 
 -----
 

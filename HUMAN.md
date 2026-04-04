@@ -7,7 +7,7 @@ This file is primarily for you, the human operator. AI assistants should normall
 Write a short description of yourself, your background, and what motivates you to use this template.
 
 ## My Persona (Optional)
-If you want assistants to tailor depth and which files they suggest, note which **persona** from `advanced/PERSONAS.md` fits you best (1–4, or “between 1 and 2”, etc.). Example: `Persona 2`. Ask assistants to read this section only when you explicitly want them to use `HUMAN.md` for behavior — see `AGENTS.md`.
+If you want assistants to tailor depth and which files they suggest, note which **persona** from `.advanced/PERSONAS.md` fits you best (1–4, or “between 1 and 2”, etc.). Example: `Persona 2`. Ask assistants to read this section only when you explicitly want them to use `HUMAN.md` for behavior — see `AGENTS.md`.
 
 ## My Constraints and Energy / Time Patterns
 Capture practical realities that matter for planning, such as:

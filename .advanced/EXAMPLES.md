@@ -11,7 +11,8 @@ A new user clones the template and wants a small web app.
 3. In `SPEC.md`, fill **Vision and Goals** and **Personas / Users** for the app.
 4. Add three items under **High-Level Feature List**, then expand one in **Feature Specifications** with acceptance criteria.
 5. When ready for code, follow `README.md` → **Creating a Separate Implementation Repository**, complete the optional acknowledgment in `HUMAN.md` if they use it, then create the new repo and copy only the specs they need.
-6. **Optional:** In the **implementation** repo (not the planning template), add IDE rules or agent files from a third-party catalog if they want depth—e.g. copy or install specialists from [**agency-agents**](https://github.com/msitarzewski/agency-agents) for Cursor, Copilot, Claude Code, or other supported tools. Keep **`AGENTS.md`** in the planning repo as the only assistant contract **there**; review any external pack’s license and prompts before use.
+6. **Optional:** Copy `TASKS.example.md` → `TASKS.md` for a gitignored checklist while iterating; or use **`## Next steps (working)`** in `SPEC.md` for a few bullets in one file.
+7. **Optional:** In the **implementation** repo (not the planning template), add IDE rules or agent files from a third-party catalog if they want depth—e.g. copy or install specialists from [**agency-agents**](https://github.com/msitarzewski/agency-agents) for Cursor, Copilot, Claude Code, or other supported tools. Keep **`AGENTS.md`** in the planning repo as the only assistant contract **there**; review any external pack’s license and prompts before use.
 
 ## Example: Non-Software Walkthrough — Short-Film Treatment
 Same template, creative outcome: a 12-minute short film.
@@ -19,7 +20,7 @@ Same template, creative outcome: a 12-minute short film.
 **Day 1 — Clone and frame the work**
 
 - Copy context templates as in the software example.
-- Read `README.md` “What This Is” and **Persona 1** path in `advanced/PERSONAS.md`.
+- Read `README.md` “What This Is” and **Persona 1** path in `.advanced/PERSONAS.md`.
 - Open `SPEC.md` → **Vision and Goals**: logline, tone (e.g. bittersweet comedy), intended festival tier or audience.
 
 **Day 2 — Structure as “features”**
@@ -38,7 +39,7 @@ Use a concrete side project (such as the ForkIt experience) to demonstrate:
 - Setting up context and workflow.
 - Deciding when (and how) to spin up an implementation repo.
 
-For more background on how this template grew out of a real ForkIt codebase and its specs, see `advanced/ORIGIN_STORY.md`.
+For more background on how this template grew out of a real ForkIt codebase and its specs, see `.advanced/ORIGIN_STORY.md`.
 
 ## See Also
 If you want more code-generating or compiler-style spec workflows, explore:
